@@ -29,7 +29,6 @@
       color: #333;
     }
 
-    }
   </style>
 </head>
 <body>

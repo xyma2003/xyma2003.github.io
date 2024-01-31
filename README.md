@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -13,13 +12,14 @@
     }
 
     .left-column {
-      width: 30%;
+      display: block;
       background-color: #f1f1f1;
       padding: 20px;
       box-sizing: border-box;
     }
 
     .right-column {
+      display: block;
       flex: 1;
       padding: 20px;
       box-sizing: border-box;
@@ -29,22 +29,17 @@
       color: #333;
     }
 
-    /* 在小屏幕上使用媒体查询进行响应式设计 */
-    @media screen and (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-
-      .left-column, .right-column {
-        width: 100%;
-      }
     }
   </style>
 </head>
 <body>
   <div class = "left-column">
+    <h5>Ma Xinyue</h5>
+    <p>Undergraduate</p>
+    <p>University of Hong Kong</p>
+  </div>
+  <div class = "right-column">
     <h3>About me</h3>
-    <p></p>
   </div>
 </body>
 </html>

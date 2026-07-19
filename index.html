@@ -12,38 +12,62 @@
       color: #333;
       line-height: 1.7;
     }
-    .container {
-      max-width: 900px;
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 50px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 60px 30px;
     }
-    header {
+    .sidebar {
+      position: sticky;
+      top: 40px;
+      align-self: start;
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea, #5a67d8);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0 auto 16px;
+      letter-spacing: 1px;
+    }
+    .sidebar .name {
       text-align: center;
-      margin-bottom: 50px;
-    }
-    header h1 {
-      font-size: 32px;
+      font-size: 22px;
       color: #1a1a1a;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
-    header .title {
-      font-size: 18px;
+    .sidebar .tagline {
+      text-align: center;
+      font-size: 13px;
       color: #666;
       margin-bottom: 16px;
     }
     .lang-switcher {
       display: flex;
       justify-content: center;
-      gap: 8px;
-      margin-bottom: 20px;
+      gap: 6px;
+      margin-bottom: 16px;
     }
     .lang-btn {
-      background: #fff;
-      border: 1px solid #ddd;
+      background: #f8f9fa;
+      border: 1px solid #e2e8f0;
       color: #666;
-      padding: 4px 14px;
-      border-radius: 16px;
-      font-size: 13px;
+      padding: 3px 12px;
+      border-radius: 14px;
+      font-size: 12px;
       cursor: pointer;
       transition: all 0.2s;
       font-family: inherit;
@@ -57,20 +81,56 @@
       color: #fff;
       border-color: #667eea;
     }
-    header .links {
+    .sidebar .links {
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 16px;
+      border-top: 1px solid #f0f0f0;
     }
-    header .links a {
+    .sidebar .links a {
       color: #667eea;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 14px;
       transition: color 0.2s;
     }
-    header .links a:hover {
+    .sidebar .links a:hover {
       color: #5a67d8;
+    }
+    .sidebar-block {
+      padding-top: 16px;
+      margin-top: 16px;
+      border-top: 1px solid #f0f0f0;
+    }
+    .sidebar-block .label {
+      font-size: 12px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .skill-tag {
+      background: #eef;
+      color: #667eea;
+      padding: 3px 10px;
+      border-radius: 14px;
+      font-size: 12px;
+    }
+    .sidebar .footer {
+      text-align: center;
+      color: #bbb;
+      font-size: 11px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #f0f0f0;
+    }
+    .main {
+      min-width: 0;
     }
     section {
       background: #fff;
@@ -87,7 +147,7 @@
       padding-bottom: 8px;
     }
     .item {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
     .item:last-child {
       margin-bottom: 0;
@@ -97,6 +157,7 @@
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
+      gap: 8px;
     }
     .item-header h3 {
       font-size: 16px;
@@ -105,12 +166,18 @@
     .item-header .date {
       font-size: 13px;
       color: #999;
+      white-space: nowrap;
     }
     .item .org {
       font-size: 14px;
       color: #667eea;
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
+    }
+    .item .location {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 6px;
     }
     .item ul {
       margin-top: 6px;
@@ -124,155 +191,169 @@
     .item li strong {
       color: #333;
     }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .skill-tag {
-      background: #eef;
-      color: #667eea;
-      padding: 4px 12px;
-      border-radius: 16px;
-      font-size: 13px;
-    }
-    footer {
-      text-align: center;
-      color: #999;
-      font-size: 13px;
-      margin-top: 30px;
-    }
-    @media (max-width: 600px) {
-      .container { padding: 30px 16px; }
-      header h1 { font-size: 26px; }
+    @media (max-width: 768px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 30px 16px;
+      }
+      .sidebar {
+        position: static;
+        top: auto;
+      }
+      .avatar {
+        width: 64px;
+        height: 64px;
+        font-size: 24px;
+      }
       section { padding: 20px; }
     }
   </style>
 </head>
 <body>
-<div class="container">
+<div class="layout">
 
-  <header>
-    <h1>Max Ma</h1>
-    <div class="title" data-zh="软件工程师 — AI Agent 与 LLM 应用" data-hant="軟件工程師 — AI Agent 與 LLM 應用" data-en="Software Engineer — AI Agent &amp; LLM Applications">软件工程师 — AI Agent 与 LLM 应用</div>
+  <aside class="sidebar">
+    <div class="avatar">MM</div>
+    <div class="name">Max Ma</div>
+    <div class="tagline" data-zh="软件工程师 · AI Agent 与 LLM 应用" data-hant="軟件工程師 · AI Agent 與 LLM 應用" data-en="Software Engineer · AI Agent &amp; LLM">软件工程师 · AI Agent 与 LLM 应用</div>
+
     <div class="lang-switcher">
       <button class="lang-btn" data-lang="zh">中文</button>
       <button class="lang-btn" data-lang="hant">繁中</button>
       <button class="lang-btn" data-lang="en">EN</button>
     </div>
+
     <div class="links">
       <a href="mailto:u3594619@connect.hku.hk">📧 <span data-zh="邮箱" data-hant="郵箱" data-en="Email">邮箱</span></a>
       <a href="https://github.com/xyma2003" target="_blank">💻 GitHub</a>
       <a href="https://github.com/xyma2003/cv-collect" target="_blank">📄 <span data-zh="简历" data-hant="簡歷" data-en="Resume">简历</span></a>
     </div>
-  </header>
 
-  <section>
-    <h2 data-zh="关于" data-hant="關於" data-en="About">关于</h2>
-    <p data-zh="美团软件工程师，构建生产级 AI Agent 系统。目前负责美国餐厅实时 AI 电话点餐和 KYC 风控的金融实体知识库。专注于多智能体架构、LLM 可靠性工程，以及真正能落地的 AI 产品。" data-hant="美團軟件工程師，構建生產級 AI Agent 系統。目前負責美國餐廳實時 AI 電話點餐和 KYC 風控的金融實體知識庫。專注於多智能體架構、LLM 可靠性工程，以及真正能落地的 AI 產品。" data-en="Software Engineer at Meituan, building production AI agent systems. Currently working on real-time AI phone ordering for US restaurants and financial entity knowledge bases for KYC risk control. Passionate about multi-agent architectures, LLM reliability engineering, and shipping AI products that work in the real world.">美团软件工程师，构建生产级 AI Agent 系统。目前负责美国餐厅实时 AI 电话点餐和 KYC 风控的金融实体知识库。专注于多智能体架构、LLM 可靠性工程，以及真正能落地的 AI 产品。</p>
-  </section>
-
-  <section>
-    <h2 data-zh="工作经历" data-hant="工作經歷" data-en="Experience">工作经历</h2>
-
-    <div class="item">
-      <div class="item-header">
-        <h3 data-zh="软件工程师" data-hant="軟件工程師" data-en="Software Engineer">软件工程师</h3>
-        <span class="date" data-zh="2025.09 — 至今" data-hant="2025.09 — 至今" data-en="2025.09 — Present">2025.09 — 至今</span>
+    <div class="sidebar-block">
+      <div class="label" data-zh="技能" data-hant="技能" data-en="Skills">技能</div>
+      <div class="skills">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">LangGraph</span>
+        <span class="skill-tag">Pipecat</span>
+        <span class="skill-tag">OpenAI Realtime API</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag" data-zh="Prompt 工程" data-hant="Prompt 工程" data-en="Prompt Engineering">Prompt 工程</span>
+        <span class="skill-tag">MCP</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Redis</span>
+        <span class="skill-tag">DynamoDB</span>
+        <span class="skill-tag">ChromaDB</span>
+        <span class="skill-tag">SpaCy</span>
       </div>
-      <div class="org" data-zh="美团" data-hant="美團" data-en="Meituan">美团</div>
-      <ul>
-        <li data-zh="<strong>AI 电话点餐 Agent</strong>：基于 Pipecat + OpenAI Realtime API 构建分层多智能体系统（Chat Agent + 4 个 Supervisor）。已服务 9 家门店、约 1000 笔订单，准确率 94.8%。通话时长从 5 分钟压缩到 2 分钟。" data-hant="<strong>AI 電話點餐 Agent</strong>：基於 Pipecat + OpenAI Realtime API 構建分層多智能體系統（Chat Agent + 4 個 Supervisor）。已服務 9 家門店、約 1000 筆訂單，準確率 94.8%。通話時長從 5 分鐘壓縮到 2 分鐘。" data-en="<strong>AI Phone Ordering Agent</strong>: Built tiered multi-agent system (Chat Agent + 4 Supervisors) on Pipecat + OpenAI Realtime API. Serving 9 stores, ~1,000 orders, 94.8% accuracy. Call duration 5min → 2min."><strong>AI 电话点餐 Agent</strong>：基于 Pipecat + OpenAI Realtime API 构建分层多智能体系统（Chat Agent + 4 个 Supervisor）。已服务 9 家门店、约 1000 笔订单，准确率 94.8%。通话时长从 5 分钟压缩到 2 分钟。</li>
-        <li data-zh="<strong>金融实体知识库</strong>：主导 KYC 端到端 LLM 流程——POI 检索、CoT 抽取、幻觉检测（SpaCy + NER）、模型蒸馏。200 万+ 记录，准确率从 62% 提升至 85.33%。" data-hant="<strong>金融實體知識庫</strong>：主導 KYC 端到端 LLM 流程——POI 檢索、CoT 抽取、幻覺檢測（SpaCy + NER）、模型蒸餾。200 萬+ 記錄，準確率從 62% 提升至 85.33%。" data-en="<strong>Financial Entity Knowledge Base</strong>: Led end-to-end LLM pipeline for KYC — POI retrieval, CoT extraction, hallucination detection (SpaCy + NER), model distillation. 2M+ records, accuracy 62% → 85.33%."><strong>金融实体知识库</strong>：主导 KYC 端到端 LLM 流程——POI 检索、CoT 抽取、幻觉检测（SpaCy + NER）、模型蒸馏。200 万+ 记录，准确率从 62% 提升至 85.33%。</li>
-        <li data-zh="<strong>数据质量 Agent</strong>：自动化错误根因分析，提供 benchmark 对比与 prompt / 数据清洗建议。" data-hant="<strong>數據質量 Agent</strong>：自動化錯誤根因分析，提供 benchmark 對比與 prompt / 數據清洗建議。" data-en="<strong>Data Quality Agent</strong>: Automated error root cause analysis with benchmark comparison and prompt/data cleaning recommendations."><strong>数据质量 Agent</strong>：自动化错误根因分析，提供 benchmark 对比与 prompt / 数据清洗建议。</li>
-      </ul>
     </div>
 
-    <div class="item">
-      <div class="item-header">
-        <h3 data-zh="前端开发实习生" data-hant="前端開發實習生" data-en="Frontend Development Intern">前端开发实习生</h3>
-        <span class="date">2024.05 — 2024.08</span>
+    <div class="footer">© 2026 Max Ma</div>
+  </aside>
+
+  <main class="main">
+
+    <section>
+      <h2 data-zh="关于" data-hant="關於" data-en="About">关于</h2>
+      <p data-zh="美团软件工程师，构建生产级 AI Agent 系统。目前负责美国餐厅实时 AI 电话点餐和 KYC 风控的金融实体知识库。专注于多智能体架构、LLM 可靠性工程，以及真正能落地的 AI 产品。" data-hant="美團軟件工程師，構建生產級 AI Agent 系統。目前負責美國餐廳實時 AI 電話點餐和 KYC 風控的金融實體知識庫。專注於多智能體架構、LLM 可靠性工程，以及真正能落地的 AI 產品。" data-en="Software Engineer at Meituan, building production AI agent systems. Currently working on real-time AI phone ordering for US restaurants and financial entity knowledge bases for KYC risk control. Passionate about multi-agent architectures, LLM reliability engineering, and shipping AI products that work in the real world.">美团软件工程师，构建生产级 AI Agent 系统。目前负责美国餐厅实时 AI 电话点餐和 KYC 风控的金融实体知识库。专注于多智能体架构、LLM 可靠性工程，以及真正能落地的 AI 产品。</p>
+    </section>
+
+    <section>
+      <h2 data-zh="教育" data-hant="教育" data-en="Education">教育</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <h3 data-zh="香港大学" data-hant="香港大學" data-en="The University of Hong Kong">香港大学</h3>
+          <span class="date">2021.09 — 2025.07</span>
+        </div>
+        <div class="org" data-zh="工学学士 — 计算机科学与金融科技" data-hant="工學學士 — 計算機科學與金融科技" data-en="B.Eng. — Computer Science &amp; Financial Technology">工学学士 — 计算机科学与金融科技</div>
+        <div class="location" data-zh="中国香港" data-hant="中國香港" data-en="Hong Kong SAR">中国香港</div>
+        <ul>
+          <li data-zh="全额奖学金（连续 4 年）、院长荣誉榜" data-hant="全額獎學金（連續 4 年）、院長榮譽榜" data-en="Full Scholarship (4 consecutive years), Dean's Honor List">全额奖学金（连续 4 年）、院长荣誉榜</li>
+        </ul>
       </div>
-      <div class="org" data-zh="美团" data-hant="美團" data-en="Meituan">美团</div>
-      <ul>
-        <li data-zh="负责 C 端小程序功能开发，设计弹性缩放动画。主导核心逻辑重构与组件库抽离。修复 5+ 处遗留逻辑缺陷。" data-hant="負責 C 端小程式功能開發，設計彈性縮放動畫。主導核心邏輯重構與組件庫抽離。修復 5+ 處遺留邏輯缺陷。" data-en="Built C-end mini-program features, designed elastic scaling animations. Led core logic refactor and component library extraction. Fixed 5+ legacy logic defects.">负责 C 端小程序功能开发，设计弹性缩放动画。主导核心逻辑重构与组件库抽离。修复 5+ 处遗留逻辑缺陷。</li>
-      </ul>
-    </div>
-  </section>
 
-  <section>
-    <h2 data-zh="项目" data-hant="項目" data-en="Projects">项目</h2>
-
-    <div class="item">
-      <div class="item-header">
-        <h3><a href="https://github.com/xyma2003/multi-agent-debate" target="_blank" style="color:#333;text-decoration:none;" data-zh="多智能体辩论系统" data-hant="多智能體辯論系統" data-en="Multi-Agent Debate System">多智能体辩论系统</a></h3>
-        <span class="date" data-zh="2026.04 — 至今" data-hant="2026.04 — 至今" data-en="2026.04 — Present">2026.04 — 至今</span>
+      <div class="item">
+        <div class="item-header">
+          <h3 data-zh="英属哥伦比亚大学" data-hant="英屬哥倫比亞大學" data-en="University of British Columbia">英属哥伦比亚大学</h3>
+          <span class="date">2024.01 — 2024.04</span>
+        </div>
+        <div class="org" data-zh="交换生项目" data-hant="交換生項目" data-en="Exchange Program">交换生项目</div>
+        <div class="location" data-zh="加拿大温哥华" data-hant="加拿大溫哥華" data-en="Vancouver, Canada">加拿大温哥华</div>
+        <ul>
+          <li data-zh="由香港大学选派的为期一学期海外交换，修读计算机科学与金融科技相关课程。" data-hant="由香港大學選派的為期一學期海外交換，修讀計算機科學與金融科技相關課程。" data-en="One-term exchange selected and nominated by HKU; coursework in Computer Science and Financial Technology.">由香港大学选派的为期一学期海外交换，修读计算机科学与金融科技相关课程。</li>
+        </ul>
       </div>
-      <ul>
-        <li data-zh="自适应 PROHIBITION 框架：基于问题类型的辩论约束。情境依赖型问题得分提高 72%。" data-hant="自適應 PROHIBITION 框架：基於問題類型的辯論約束。情境依賴型問題得分提高 72%。" data-en="Adaptive PROHIBITION framework: question-type-aware debate constraints. Context-dependent questions scored 72% higher.">自适应 PROHIBITION 框架：基于问题类型的辩论约束。情境依赖型问题得分提高 72%。</li>
-        <li data-zh="反共识架构：3 个 LLM Agent 基于 LangGraph，NLI 立场检测。模糊表达下降 28%。M&A 准确率 0.60 vs 0.40。" data-hant="反共識架構：3 個 LLM Agent 基於 LangGraph，NLI 立場檢測。模糊表達下降 28%。M&A 準確率 0.60 vs 0.40。" data-en="Anti-consensus architecture: 3 LLM agents via LangGraph, NLI stance detection. Vague expression −28%. M&A accuracy 0.60 vs 0.40.">反共识架构：3 个 LLM Agent 基于 LangGraph，NLI 立场检测。模糊表达下降 28%。M&amp;A 准确率 0.60 vs 0.40。</li>
-      </ul>
-    </div>
+    </section>
 
-    <div class="item">
-      <div class="item-header">
-        <h3><a href="https://github.com/xyma2003/kdd-cup" target="_blank" style="color:#333;text-decoration:none;">KDD Cup 2026 — DataAgent-Bench</a></h3>
-        <span class="date" data-zh="2026.03 — 至今" data-hant="2026.03 — 至今" data-en="2026.03 — Present">2026.03 — 至今</span>
+    <section>
+      <h2 data-zh="工作经历" data-hant="工作經歷" data-en="Experience">工作经历</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <h3 data-zh="软件工程师" data-hant="軟件工程師" data-en="Software Engineer">软件工程师</h3>
+          <span class="date" data-zh="2025.09 — 至今" data-hant="2025.09 — 至今" data-en="2025.09 — Present">2025.09 — 至今</span>
+        </div>
+        <div class="org" data-zh="美团" data-hant="美團" data-en="Meituan">美团</div>
+        <ul>
+          <li data-zh="<strong>AI 电话点餐 Agent</strong>：基于 Pipecat + OpenAI Realtime API 构建分层多智能体系统（Chat Agent + 4 个 Supervisor）。已服务 9 家门店、约 1000 笔订单，准确率 94.8%。通话时长从 5 分钟压缩到 2 分钟。" data-hant="<strong>AI 電話點餐 Agent</strong>：基於 Pipecat + OpenAI Realtime API 構建分層多智能體系統（Chat Agent + 4 個 Supervisor）。已服務 9 家門店、約 1000 筆訂單，準確率 94.8%。通話時長從 5 分鐘壓縮到 2 分鐘。" data-en="<strong>AI Phone Ordering Agent</strong>: Built tiered multi-agent system (Chat Agent + 4 Supervisors) on Pipecat + OpenAI Realtime API. Serving 9 stores, ~1,000 orders, 94.8% accuracy. Call duration 5min → 2min."><strong>AI 电话点餐 Agent</strong>：基于 Pipecat + OpenAI Realtime API 构建分层多智能体系统（Chat Agent + 4 个 Supervisor）。已服务 9 家门店、约 1000 笔订单，准确率 94.8%。通话时长从 5 分钟压缩到 2 分钟。</li>
+          <li data-zh="<strong>金融实体知识库</strong>：主导 KYC 端到端 LLM 流程——POI 检索、CoT 抽取、幻觉检测（SpaCy + NER）、模型蒸馏。200 万+ 记录，准确率从 62% 提升至 85.33%。" data-hant="<strong>金融實體知識庫</strong>：主導 KYC 端到端 LLM 流程——POI 檢索、CoT 抽取、幻覺檢測（SpaCy + NER）、模型蒸餾。200 萬+ 記錄，準確率從 62% 提升至 85.33%。" data-en="<strong>Financial Entity Knowledge Base</strong>: Led end-to-end LLM pipeline for KYC — POI retrieval, CoT extraction, hallucination detection (SpaCy + NER), model distillation. 2M+ records, accuracy 62% → 85.33%."><strong>金融实体知识库</strong>：主导 KYC 端到端 LLM 流程——POI 检索、CoT 抽取、幻觉检测（SpaCy + NER）、模型蒸馏。200 万+ 记录，准确率从 62% 提升至 85.33%。</li>
+          <li data-zh="<strong>数据质量 Agent</strong>：自动化错误根因分析，提供 benchmark 对比与 prompt / 数据清洗建议。" data-hant="<strong>數據質量 Agent</strong>：自動化錯誤根因分析，提供 benchmark 對比與 prompt / 數據清洗建議。" data-en="<strong>Data Quality Agent</strong>: Automated error root cause analysis with benchmark comparison and prompt/data cleaning recommendations."><strong>数据质量 Agent</strong>：自动化错误根因分析，提供 benchmark 对比与 prompt / 数据清洗建议。</li>
+        </ul>
       </div>
-      <ul>
-        <li data-zh="面向异构数据分析的 ReAct Agent。5 层容错 JSON 解析器，SQL 结果 Self-Verifier。" data-hant="面向異構數據分析的 ReAct Agent。5 層容錯 JSON 解析器，SQL 結果 Self-Verifier。" data-en="ReAct agent for heterogeneous data analysis. 5-layer fault-tolerant JSON parser, Self-Verifier for SQL results.">面向异构数据分析的 ReAct Agent。5 层容错 JSON 解析器，SQL 结果 Self-Verifier。</li>
-      </ul>
-    </div>
 
-    <div class="item">
-      <div class="item-header">
-        <h3><a href="https://github.com/xyma2003/critter" target="_blank" style="color:#333;text-decoration:none;" data-zh="Critter — 桌面宠物" data-hant="Critter — 桌面寵物" data-en="Critter — Desktop Pet">Critter — 桌面宠物</a></h3>
-        <span class="date">2026.04</span>
+      <div class="item">
+        <div class="item-header">
+          <h3 data-zh="前端开发实习生" data-hant="前端開發實習生" data-en="Frontend Development Intern">前端开发实习生</h3>
+          <span class="date">2024.05 — 2024.08</span>
+        </div>
+        <div class="org" data-zh="美团" data-hant="美團" data-en="Meituan">美团</div>
+        <ul>
+          <li data-zh="负责 C 端小程序功能开发，设计弹性缩放动画。主导核心逻辑重构与组件库抽离。修复 5+ 处遗留逻辑缺陷。" data-hant="負責 C 端小程式功能開發，設計彈性縮放動畫。主導核心邏輯重構與組件庫抽離。修復 5+ 處遺留邏輯缺陷。" data-en="Built C-end mini-program features, designed elastic scaling animations. Led core logic refactor and component library extraction. Fixed 5+ legacy logic defects.">负责 C 端小程序功能开发，设计弹性缩放动画。主导核心逻辑重构与组件库抽离。修复 5+ 处遗留逻辑缺陷。</li>
+        </ul>
       </div>
-      <ul>
-        <li data-zh="macOS 桌面宠物，支持 AI 聊天（流式）、新闻推送、便签。Python + tkinter，零依赖。" data-hant="macOS 桌面寵物，支持 AI 聊天（流式）、新聞推送、便簽。Python + tkinter，零依賴。" data-en="macOS desktop pet with AI chat (streaming), news feed, and notes. Python + tkinter, zero dependencies.">macOS 桌面宠物，支持 AI 聊天（流式）、新闻推送、便签。Python + tkinter，零依赖。</li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2 data-zh="教育" data-hant="教育" data-en="Education">教育</h2>
-    <div class="item">
-      <div class="item-header">
-        <h3 data-zh="香港大学" data-hant="香港大學" data-en="The University of Hong Kong">香港大学</h3>
-        <span class="date">2021.09 — 2025.07</span>
+    <section>
+      <h2 data-zh="项目" data-hant="項目" data-en="Projects">项目</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <h3><a href="https://github.com/xyma2003/multi-agent-debate" target="_blank" style="color:#333;text-decoration:none;" data-zh="多智能体辩论系统" data-hant="多智能體辯論系統" data-en="Multi-Agent Debate System">多智能体辩论系统</a></h3>
+          <span class="date" data-zh="2026.04 — 至今" data-hant="2026.04 — 至今" data-en="2026.04 — Present">2026.04 — 至今</span>
+        </div>
+        <ul>
+          <li data-zh="自适应 PROHIBITION 框架：基于问题类型的辩论约束。情境依赖型问题得分提高 72%。" data-hant="自適應 PROHIBITION 框架：基於問題類型的辯論約束。情境依賴型問題得分提高 72%。" data-en="Adaptive PROHIBITION framework: question-type-aware debate constraints. Context-dependent questions scored 72% higher.">自适应 PROHIBITION 框架：基于问题类型的辩论约束。情境依赖型问题得分提高 72%。</li>
+          <li data-zh="反共识架构：3 个 LLM Agent 基于 LangGraph，NLI 立场检测。模糊表达下降 28%。M&amp;A 准确率 0.60 vs 0.40。" data-hant="反共識架構：3 個 LLM Agent 基於 LangGraph，NLI 立場檢測。模糊表達下降 28%。M&amp;A 準確率 0.60 vs 0.40。" data-en="Anti-consensus architecture: 3 LLM agents via LangGraph, NLI stance detection. Vague expression −28%. M&A accuracy 0.60 vs 0.40.">反共识架构：3 个 LLM Agent 基于 LangGraph，NLI 立场检测。模糊表达下降 28%。M&amp;A 准确率 0.60 vs 0.40。</li>
+        </ul>
       </div>
-      <div class="org" data-zh="工学学士 — 计算机科学与金融科技" data-hant="工學學士 — 計算機科學與金融科技" data-en="B.Eng. — Computer Science &amp; Financial Technology">工学学士 — 计算机科学与金融科技</div>
-      <ul>
-        <li data-zh="全额奖学金（连续 4 年）、院长荣誉榜" data-hant="全額獎學金（連續 4 年）、院長榮譽榜" data-en="Full Scholarship (4 consecutive years), Dean's Honor List">全额奖学金（连续 4 年）、院长荣誉榜</li>
-        <li data-zh="交换：加拿大英属哥伦比亚大学，2024.01 — 2024.04" data-hant="交換：加拿大英屬哥倫比亞大學，2024.01 — 2024.04" data-en="Exchange: University of British Columbia, 2024.01 — 2024.04">交换：加拿大英属哥伦比亚大学，2024.01 — 2024.04</li>
-      </ul>
-    </div>
-  </section>
 
-  <section>
-    <h2 data-zh="技能" data-hant="技能" data-en="Skills">技能</h2>
-    <div class="skills">
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">LangChain</span>
-      <span class="skill-tag">LangGraph</span>
-      <span class="skill-tag">Pipecat</span>
-      <span class="skill-tag">OpenAI Realtime API</span>
-      <span class="skill-tag">RAG</span>
-      <span class="skill-tag" data-zh="Prompt 工程" data-hant="Prompt 工程" data-en="Prompt Engineering">Prompt 工程</span>
-      <span class="skill-tag">MCP</span>
-      <span class="skill-tag">Java</span>
-      <span class="skill-tag">C++</span>
-      <span class="skill-tag">SQL</span>
-      <span class="skill-tag">MySQL</span>
-      <span class="skill-tag">Redis</span>
-      <span class="skill-tag">DynamoDB</span>
-      <span class="skill-tag">ChromaDB</span>
-      <span class="skill-tag">SpaCy</span>
-    </div>
-  </section>
+      <div class="item">
+        <div class="item-header">
+          <h3><a href="https://github.com/xyma2003/kdd-cup" target="_blank" style="color:#333;text-decoration:none;">KDD Cup 2026 — DataAgent-Bench</a></h3>
+          <span class="date" data-zh="2026.03 — 至今" data-hant="2026.03 — 至今" data-en="2026.03 — Present">2026.03 — 至今</span>
+        </div>
+        <ul>
+          <li data-zh="面向异构数据分析的 ReAct Agent。5 层容错 JSON 解析器，SQL 结果 Self-Verifier。" data-hant="面向異構數據分析的 ReAct Agent。5 層容錯 JSON 解析器，SQL 結果 Self-Verifier。" data-en="ReAct agent for heterogeneous data analysis. 5-layer fault-tolerant JSON parser, Self-Verifier for SQL results.">面向异构数据分析的 ReAct Agent。5 层容错 JSON 解析器，SQL 结果 Self-Verifier。</li>
+        </ul>
+      </div>
 
-  <footer data-zh="© 2026 Max Ma. 使用原生 HTML & CSS 构建。" data-hant="© 2026 Max Ma. 使用原生 HTML & CSS 構建。" data-en="© 2026 Max Ma. Built with vanilla HTML & CSS.">© 2026 Max Ma. 使用原生 HTML &amp; CSS 构建。</footer>
+      <div class="item">
+        <div class="item-header">
+          <h3><a href="https://github.com/xyma2003/critter" target="_blank" style="color:#333;text-decoration:none;" data-zh="Critter — 桌面宠物" data-hant="Critter — 桌面寵物" data-en="Critter — Desktop Pet">Critter — 桌面宠物</a></h3>
+          <span class="date">2026.04</span>
+        </div>
+        <ul>
+          <li data-zh="macOS 桌面宠物，支持 AI 聊天（流式）、新闻推送、便签。Python + tkinter，零依赖。" data-hant="macOS 桌面寵物，支持 AI 聊天（流式）、新聞推送、便簽。Python + tkinter，零依賴。" data-en="macOS desktop pet with AI chat (streaming), news feed, and notes. Python + tkinter, zero dependencies.">macOS 桌面宠物，支持 AI 聊天（流式）、新闻推送、便签。Python + tkinter，零依赖。</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
 
 </div>
 
@@ -290,8 +371,7 @@
         if (val === undefined) return;
         if (el.tagName === 'TITLE') {
           document.title = val;
-        } else if (el.innerHTML !== el.textContent && el.querySelector('strong, a, span')) {
-          // For elements with nested HTML, use innerHTML to preserve markup
+        } else if (el.querySelector('strong, a, span')) {
           el.innerHTML = val;
         } else {
           el.textContent = val;

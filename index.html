@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max Ma — Software Engineer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 30px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    header h1 {
+      font-size: 32px;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    header .title {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    header .links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    header .links a {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+    header .links a:hover {
+      color: #5a67d8;
+    }
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    section h2 {
+      font-size: 20px;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 8px;
+    }
+    .item {
+      margin-bottom: 20px;
+    }
+    .item:last-child {
+      margin-bottom: 0;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .item-header h3 {
+      font-size: 16px;
+      color: #333;
+    }
+    .item-header .date {
+      font-size: 13px;
+      color: #999;
+    }
+    .item .org {
+      font-size: 14px;
+      color: #667eea;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .item ul {
+      margin-top: 6px;
+      padding-left: 20px;
+    }
+    .item li {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 4px;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-tag {
+      background: #eef;
+      color: #667eea;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 13px;
+    }
+    footer {
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 30px 16px; }
+      header h1 { font-size: 26px; }
+      section { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Max Ma</h1>
+    <div class="title">Software Engineer — AI Agent &amp; LLM Applications</div>
+    <div class="links">
+      <a href="mailto:u3594619@connect.hku.hk">📧 Email</a>
+      <a href="https://github.com/xyma2003" target="_blank">💻 GitHub</a>
+      <a href="https://github.com/xyma2003/cv-collect" target="_blank">📄 Resume</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>Software Engineer at Meituan, building production AI agent systems. Currently working on real-time AI phone ordering for US restaurants and financial entity knowledge bases for KYC risk control. Passionate about multi-agent architectures, LLM reliability engineering, and shipping AI products that work in the real world.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <h3>Software Engineer</h3>
+        <span class="date">2025.09 — Present</span>
+      </div>
+      <div class="org">Meituan</div>
+      <ul>
+        <li><strong>AI Phone Ordering Agent</strong>: Built tiered multi-agent system (Chat Agent + 4 Supervisors) on Pipecat + OpenAI Realtime API. Serving 9 stores, ~1,000 orders, 94.8% accuracy. Call duration 5min → 2min.</li>
+        <li><strong>Financial Entity Knowledge Base</strong>: Led end-to-end LLM pipeline for KYC — POI retrieval, CoT extraction, hallucination detection (SpaCy + NER), model distillation. 2M+ records, accuracy 62% → 85.33%.</li>
+        <li><strong>Data Quality Agent</strong>: Automated error root cause analysis with benchmark comparison and prompt/data cleaning recommendations.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <h3>Frontend Development Intern</h3>
+        <span class="date">2024.05 — 2024.08</span>
+      </div>
+      <div class="org">Meituan</div>
+      <ul>
+        <li>Built C-end mini-program features, designed elastic scaling animations. Led core logic refactor and component library extraction. Fixed 5+ legacy logic defects.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <h3><a href="https://github.com/xyma2003/multi-agent-debate" target="_blank" style="color:#333;text-decoration:none;">Multi-Agent Debate System</a></h3>
+        <span class="date">2026.04 — Present</span>
+      </div>
+      <ul>
+        <li>Adaptive PROHIBITION framework: question-type-aware debate constraints. Context-dependent questions scored 72% higher.</li>
+        <li>Anti-consensus architecture: 3 LLM agents via LangGraph, NLI stance detection. Vague expression −28%. M&A accuracy 0.60 vs 0.40.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <h3><a href="https://github.com/xyma2003/kdd-cup" target="_blank" style="color:#333;text-decoration:none;">KDD Cup 2026 — DataAgent-Bench</a></h3>
+        <span class="date">2026.03 — Present</span>
+      </div>
+      <ul>
+        <li>ReAct agent for heterogeneous data analysis. 5-layer fault-tolerant JSON parser, Self-Verifier for SQL results.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <h3><a href="https://github.com/xyma2003/critter" target="_blank" style="color:#333;text-decoration:none;">Critter — Desktop Pet</a></h3>
+        <span class="date">2026.04</span>
+      </div>
+      <ul>
+        <li>macOS desktop pet with AI chat (streaming), news feed, and notes. Python + tkinter, zero dependencies.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="item">
+      <div class="item-header">
+        <h3>The University of Hong Kong</h3>
+        <span class="date">2021.09 — 2025.07</span>
+      </div>
+      <div class="org">B.Eng. — Computer Science &amp; Financial Technology</div>
+      <ul>
+        <li>Full Scholarship (4 consecutive years), Dean's Honor List</li>
+        <li>Exchange: University of British Columbia, 2024.01 — 2024.04</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">LangChain</span>
+      <span class="skill-tag">LangGraph</span>
+      <span class="skill-tag">Pipecat</span>
+      <span class="skill-tag">OpenAI Realtime API</span>
+      <span class="skill-tag">RAG</span>
+      <span class="skill-tag">Prompt Engineering</span>
+      <span class="skill-tag">MCP</span>
+      <span class="skill-tag">Java</span>
+      <span class="skill-tag">C++</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">MySQL</span>
+      <span class="skill-tag">Redis</span>
+      <span class="skill-tag">DynamoDB</span>
+      <span class="skill-tag">ChromaDB</span>
+      <span class="skill-tag">SpaCy</span>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Max Ma. Built with vanilla HTML &amp; CSS.
+  </footer>
+
+</div>
+</body>
+</html>

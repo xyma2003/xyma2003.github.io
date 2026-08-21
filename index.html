@@ -4,28 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f1e8">
-  <meta name="description" content="Max Ma — AI 系统与产品工程师，专注生产级 Agent、知识工程与开发者工具。">
-  <meta property="og:title" content="Max Ma — AI Systems &amp; Product Engineering">
-  <meta property="og:description" content="Turning complex AI systems into products people actually use.">
+  <meta name="description" content="Max Ma 的个人网站。软件工程师，主要从事 AI Agent 与 LLM 应用开发。">
+  <meta property="og:title" content="Max Ma — Software Engineer">
+  <meta property="og:description" content="Personal website of Max Ma, a software engineer working on AI agents and LLM applications.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://xyma2003.github.io/">
   <meta name="twitter:card" content="summary">
-  <title>Max Ma — AI 系统与产品工程师</title>
+  <title>Max Ma — 软件工程师</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%231b33cc%22/><path d=%22M15 45V19h7l10 14 10-14h7v26h-8V31l-9 12-9-12v14z%22 fill=%22%23f4f1e8%22/></svg>">
   <style>
     :root {
-      --paper: #f4f1e8;
-      --paper-deep: #e9e4d7;
-      --ink: #151712;
-      --muted: #686b62;
-      --line: rgba(21, 23, 18, 0.16);
-      --blue: #1b33cc;
-      --blue-dark: #10228f;
-      --lime: #c8f169;
-      --orange: #ff6b3d;
-      --white: #fffefa;
-      --radius: 24px;
-      --shadow: 0 20px 50px rgba(25, 26, 20, 0.08);
+      --paper: #f7f7f5;
+      --paper-deep: #edede8;
+      --ink: #181818;
+      --muted: #6b6b68;
+      --line: #ddddd7;
+      --blue: #2456a6;
+      --blue-dark: #1d478a;
+      --lime: #2456a6;
+      --orange: #2456a6;
+      --white: #ffffff;
+      --radius: 14px;
+      --shadow: none;
     }
 
     * { box-sizing: border-box; }
@@ -38,9 +38,7 @@
     body {
       margin: 0;
       color: var(--ink);
-      background:
-        radial-gradient(circle at 92% 5%, rgba(200, 241, 105, 0.28), transparent 24rem),
-        var(--paper);
+      background: var(--paper);
       font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
       -webkit-font-smoothing: antialiased;
     }
@@ -61,17 +59,17 @@
 
     .site-header {
       position: sticky; top: 0; z-index: 50; border-bottom: 1px solid transparent;
-      background: rgba(244, 241, 232, 0.86); backdrop-filter: blur(18px);
+      background: rgba(247, 247, 245, 0.92); backdrop-filter: blur(14px);
     }
     .site-header.scrolled { border-bottom-color: var(--line); }
-    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
     .brand {
       display: inline-flex; align-items: center; gap: 11px; color: var(--ink);
       text-decoration: none; font-weight: 800; letter-spacing: -0.02em;
     }
     .brand-mark {
-      width: 34px; height: 34px; display: grid; place-items: center; color: var(--white);
-      background: var(--blue); border-radius: 10px; font-size: 12px; transform: rotate(-4deg);
+      width: 32px; height: 32px; display: grid; place-items: center; color: var(--white);
+      background: var(--ink); border-radius: 8px; font-size: 11px;
     }
     .nav-center { display: flex; gap: 26px; }
     .nav-center a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 650; transition: color 160ms ease; }
@@ -80,13 +78,13 @@
     .lang-btn { min-width: 38px; padding: 6px 9px; border: 0; border-radius: 999px; color: var(--muted); background: transparent; cursor: pointer; font-size: 12px; font-weight: 700; }
     .lang-btn.active { color: var(--white); background: var(--ink); }
 
-    .hero { padding: 104px 0 82px; overflow: hidden; }
+    .hero { padding: 96px 0 72px; overflow: hidden; }
     .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 310px; align-items: end; gap: 70px; }
-    .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 26px; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: 0.13em; text-transform: uppercase; }
-    .eyebrow::before { content: ""; width: 28px; height: 3px; background: currentColor; }
-    h1 { max-width: 880px; margin: 0; font-size: clamp(50px, 7.4vw, 98px); line-height: 0.98; letter-spacing: -0.065em; font-weight: 850; }
+    .eyebrow { display: block; margin: 0 0 24px; color: var(--muted); font-size: 12px; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; }
+    .eyebrow::before { display: none; }
+    h1 { max-width: 850px; margin: 0; font-size: clamp(46px, 5.4vw, 68px); line-height: 1.08; letter-spacing: -0.045em; font-weight: 760; }
     h1 span { display: block; }
-    h1 .accent { color: var(--blue); font-family: Georgia, "Noto Serif SC", serif; font-style: italic; font-weight: 600; letter-spacing: -0.055em; }
+    h1 .accent { color: var(--ink); font-family: inherit; font-style: normal; font-weight: 780; letter-spacing: -0.05em; }
     .hero-side { padding-bottom: 8px; }
     .hero-side p { margin: 0 0 26px; color: #3f423b; font-size: 17px; line-height: 1.75; }
     .actions { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -95,41 +93,42 @@
     .button.primary { color: var(--white); background: var(--ink); }
     .button.primary:hover { background: var(--blue); }
     .button.secondary:hover { color: var(--white); background: var(--ink); }
-    .status-strip { margin-top: 76px; border-block: 1px solid var(--line); }
+    .status-strip { margin-top: 64px; border-block: 1px solid var(--line); }
     .status-inner { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: var(--muted); font-size: 13px; font-weight: 650; }
     .status { display: inline-flex; align-items: center; gap: 9px; }
-    .status-dot { width: 9px; height: 9px; border-radius: 50%; background: #42a846; box-shadow: 0 0 0 5px rgba(66, 168, 70, 0.12); }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); box-shadow: none; }
 
     .proof { padding: 0 0 118px; }
-    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255, 254, 250, 0.6); box-shadow: var(--shadow); overflow: hidden; }
-    .metric { min-height: 190px; padding: 34px; display: flex; flex-direction: column; justify-content: space-between; }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--line); background: transparent; overflow: hidden; }
+    .metric { min-height: 160px; padding: 28px 32px; display: flex; flex-direction: column; justify-content: space-between; }
     .metric + .metric { border-left: 1px solid var(--line); }
-    .metric-value { font-size: clamp(42px, 5.4vw, 68px); line-height: 1; letter-spacing: -0.06em; font-weight: 850; }
-    .metric:nth-child(2) .metric-value { color: var(--blue); }
-    .metric:nth-child(3) .metric-value { color: var(--orange); }
+    .metric-value { font-size: clamp(38px, 4vw, 52px); line-height: 1; letter-spacing: -0.045em; font-weight: 760; }
+    .metric:nth-child(2) .metric-value,
+    .metric:nth-child(3) .metric-value { color: var(--ink); }
     .metric-label { max-width: 220px; margin-top: 26px; color: var(--muted); font-size: 14px; line-height: 1.55; }
 
-    .section { padding: 112px 0; border-top: 1px solid var(--line); }
+    .section { padding: 96px 0; border-top: 1px solid var(--line); }
     .section-head { display: grid; grid-template-columns: 1fr 1.7fr; gap: 60px; align-items: start; margin-bottom: 54px; }
-    .section-kicker { margin: 0; color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: 0.13em; text-transform: uppercase; }
-    .section-title { margin: 0; max-width: 720px; font-size: clamp(34px, 5vw, 64px); line-height: 1.04; letter-spacing: -0.045em; }
+    .section-kicker { margin: 0; color: var(--muted); font-size: 12px; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; }
+    .section-title { margin: 0; max-width: 720px; font-size: clamp(32px, 4vw, 50px); line-height: 1.12; letter-spacing: -0.035em; font-weight: 720; }
     .work-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
-    .project-card { min-height: 360px; padding: 30px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; background: var(--white); overflow: hidden; position: relative; transition: transform 220ms ease, box-shadow 220ms ease; }
-    .project-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-    .project-card.featured { grid-column: span 7; min-height: 430px; color: var(--white); background: var(--blue); border-color: var(--blue); }
-    .project-card.tall { grid-column: span 5; min-height: 430px; background: var(--lime); }
+    .project-card { min-height: 340px; padding: 28px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; background: var(--white); overflow: hidden; position: relative; transition: border-color 160ms ease; }
+    .project-card:hover { border-color: #9b9b96; }
+    .project-card.featured { grid-column: span 6; min-height: 340px; color: var(--ink); background: var(--white); border-color: var(--line); }
+    .project-card.tall { grid-column: span 6; min-height: 340px; background: var(--white); }
     .project-card.half { grid-column: span 6; }
     .card-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: auto; }
     .project-type { font-size: 11px; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
     .project-card:not(.featured) .project-type { color: var(--muted); }
-    .arrow { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-size: 19px; transition: transform 180ms ease; }
-    .project-card:hover .arrow { transform: rotate(45deg); }
-    .project-card h3 { max-width: 600px; margin: 56px 0 14px; font-size: clamp(30px, 4vw, 54px); line-height: 1.02; letter-spacing: -0.045em; }
-    .project-card.half h3, .project-card.tall h3 { font-size: clamp(28px, 3.4vw, 43px); }
+    .arrow { width: auto; height: auto; display: block; border: 0; border-radius: 0; color: var(--muted); font-size: 16px; transition: none; }
+    .project-card:hover .arrow { transform: none; color: var(--ink); }
+    .project-card h3 { max-width: 600px; margin: 52px 0 14px; font-size: clamp(28px, 3vw, 38px); line-height: 1.08; letter-spacing: -0.035em; }
+    .project-card.half h3, .project-card.tall h3 { font-size: clamp(28px, 3vw, 38px); }
     .project-card p { max-width: 590px; margin: 0; color: inherit; opacity: 0.78; font-size: 15px; line-height: 1.65; }
     .project-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-    .project-meta span { padding: 6px 10px; border: 1px solid currentColor; border-radius: 999px; font-size: 11px; font-weight: 750; opacity: 0.72; }
-    .project-number { position: absolute; right: 22px; bottom: -28px; font-family: Georgia, serif; font-size: 150px; font-style: italic; line-height: 1; opacity: 0.07; pointer-events: none; }
+    .project-meta span { padding: 0; border: 0; border-radius: 0; color: var(--muted); font-size: 11px; font-weight: 650; opacity: 1; }
+    .project-meta span + span::before { content: "·"; margin-right: 8px; }
+    .project-number { display: none; }
 
     .experience-grid { display: grid; grid-template-columns: 0.8fr 1.6fr; gap: 80px; }
     .experience-intro { position: sticky; top: 112px; align-self: start; }
@@ -145,35 +144,35 @@
     .role li::before { content: ""; position: absolute; top: 0.72em; left: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
 
     .about-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 76px; }
-    .manifesto { margin: 0; font-size: clamp(29px, 4vw, 50px); line-height: 1.2; letter-spacing: -0.04em; }
+    .manifesto { margin: 0; font-size: clamp(27px, 3.5vw, 42px); line-height: 1.28; letter-spacing: -0.03em; }
     .principles { display: grid; gap: 0; }
     .principle { display: grid; grid-template-columns: 46px 1fr; gap: 18px; padding: 22px 0; border-top: 1px solid var(--line); }
     .principle:last-child { border-bottom: 1px solid var(--line); }
-    .principle-index { color: var(--blue); font-family: Georgia, serif; font-style: italic; font-weight: 700; }
+    .principle-index { color: var(--muted); font-family: inherit; font-style: normal; font-weight: 650; }
     .principle h3 { margin: 0 0 7px; font-size: 17px; }
     .principle p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
-    .capabilities { margin-top: 76px; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
-    .capability { min-height: 170px; padding: 24px; background: rgba(255, 254, 250, 0.45); }
+    .capabilities { margin-top: 76px; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    .capability { min-height: 150px; padding: 24px; background: transparent; }
     .capability + .capability { border-left: 1px solid var(--line); }
     .capability h3 { margin: 0 0 26px; color: var(--muted); font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; }
     .capability p { margin: 0; font-size: 14px; line-height: 1.8; font-weight: 650; }
     .education { margin-top: 76px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .school { padding: 26px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .school { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
     .school-year { color: var(--muted); font-size: 12px; font-weight: 700; }
     .school h3 { margin: 30px 0 6px; font-size: 24px; letter-spacing: -0.03em; }
     .school p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
 
     .site-footer { padding: 92px 0 38px; color: var(--white); background: var(--ink); }
     .footer-main { display: grid; grid-template-columns: 1.8fr 1fr; gap: 60px; align-items: end; }
-    .footer-kicker { margin: 0 0 22px; color: var(--lime); font-size: 12px; font-weight: 850; letter-spacing: 0.13em; text-transform: uppercase; }
-    .site-footer h2 { max-width: 800px; margin: 0; font-size: clamp(44px, 7vw, 86px); line-height: 0.98; letter-spacing: -0.055em; }
+    .footer-kicker { margin: 0 0 22px; color: rgba(255, 255, 255, 0.55); font-size: 12px; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; }
+    .site-footer h2 { max-width: 800px; margin: 0; font-size: clamp(38px, 5vw, 62px); line-height: 1.05; letter-spacing: -0.04em; }
     .footer-links { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; }
     .footer-links .button { border-color: rgba(255, 255, 255, 0.55); }
-    .footer-links .button:hover { color: var(--ink); background: var(--lime); border-color: var(--lime); }
+    .footer-links .button:hover { color: var(--ink); background: var(--white); border-color: var(--white); }
     .footer-bottom { margin-top: 86px; padding-top: 22px; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid rgba(255, 255, 255, 0.18); color: rgba(255, 255, 255, 0.52); font-size: 12px; }
 
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 620ms ease, transform 620ms ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .reveal.visible { opacity: 1; transform: none; }
     :focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
 
     @media (max-width: 900px) {
@@ -196,7 +195,7 @@
       .nav { min-height: 68px; }
       .brand-text { display: none; }
       .hero { padding: 62px 0 56px; }
-      h1 { font-size: clamp(43px, 13vw, 67px); }
+      h1 { font-size: clamp(40px, 11vw, 52px); }
       .status-strip { margin-top: 50px; }
       .status-inner { align-items: flex-start; flex-direction: column; justify-content: center; padding: 16px 0; }
       .metrics { grid-template-columns: 1fr; }
@@ -204,7 +203,7 @@
       .metric + .metric { border-left: 0; border-top: 1px solid var(--line); }
       .proof { padding-bottom: 82px; }
       .section { padding: 82px 0; }
-      .project-card, .project-card.featured, .project-card.tall { min-height: 440px; padding: 24px; }
+      .project-card, .project-card.featured, .project-card.tall { min-height: 0; padding: 24px; }
       .project-card h3 { margin-top: 48px; }
       .role { grid-template-columns: 1fr; gap: 12px; }
       .capabilities, .education { grid-template-columns: 1fr; }
@@ -246,16 +245,16 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="shell hero-grid">
         <div>
-          <p class="eyebrow">AI systems · Product engineering</p>
+          <p class="eyebrow">Personal website</p>
           <h1 id="hero-title">
-            <span data-zh="把复杂的 AI 系统，" data-hant="把複雜的 AI 系統，" data-en="I turn complex AI">把复杂的 AI 系统，</span>
-            <span class="accent" data-zh="做成真正有人用的产品。" data-hant="做成真正有人用的產品。" data-en="into useful products.">做成真正有人用的产品。</span>
+            <span data-zh="Max Ma" data-hant="Max Ma" data-en="Max Ma">Max Ma</span>
+            <span class="accent" data-zh="软件工程师" data-hant="軟件工程師" data-en="Software Engineer">软件工程师</span>
           </h1>
         </div>
         <div class="hero-side">
-          <p data-zh="我是 Max，专注生产级 AI Agent、知识工程和开发者工具。我喜欢从不确定的原型开始，把它做成可评估、可追踪、可交付的系统。" data-hant="我是 Max，專注生產級 AI Agent、知識工程和開發者工具。我喜歡從不確定的原型開始，把它做成可評估、可追蹤、可交付的系統。" data-en="I'm Max, focused on production AI agents, knowledge engineering, and developer tools. I turn uncertain prototypes into systems that can be evaluated, traced, and reliably shipped.">我是 Max，专注生产级 AI Agent、知识工程和开发者工具。我喜欢从不确定的原型开始，把它做成可评估、可追踪、可交付的系统。</p>
+          <p data-zh="香港大学计算机科学与金融科技双主修毕业。目前在美团担任软件工程师，主要从事 AI Agent、LLM 数据流程和开发者工具相关开发。" data-hant="香港大學計算機科學與金融科技雙主修畢業。目前在美團擔任軟件工程師，主要從事 AI Agent、LLM 數據流程和開發者工具相關開發。" data-en="I graduated from the University of Hong Kong with a double major in Computer Science and Financial Technology. I currently work as a software engineer at Meituan on AI agents, LLM data pipelines, and developer tools.">香港大学计算机科学与金融科技双主修毕业。目前在美团担任软件工程师，主要从事 AI Agent、LLM 数据流程和开发者工具相关开发。</p>
           <div class="actions">
-            <a class="button primary" href="#work"><span data-zh="看代表作" data-hant="看代表作" data-en="View selected work">看代表作</span> ↓</a>
+            <a class="button primary" href="#work"><span data-zh="项目" data-hant="項目" data-en="Projects">项目</span> ↓</a>
             <a class="button secondary" href="https://github.com/xyma2003" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
@@ -270,36 +269,36 @@
 
     <section class="proof" aria-label="Impact metrics">
       <div class="shell metrics reveal">
-        <div class="metric"><strong class="metric-value">2M+</strong><span class="metric-label" data-zh="金融实体知识库记录，端到端 LLM 流程" data-hant="金融實體知識庫記錄，端到端 LLM 流程" data-en="financial entity records processed through an end-to-end LLM pipeline">金融实体知识库记录，端到端 LLM 流程</span></div>
-        <div class="metric"><strong class="metric-value">94.8%</strong><span class="metric-label" data-zh="AI 电话点餐 Agent 准确率，已在真实门店中服务" data-hant="AI 電話點餐 Agent 準確率，已在真實門店中服務" data-en="accuracy for an AI phone-ordering agent serving real stores">AI 电话点餐 Agent 准确率，已在真实门店中服务</span></div>
-        <div class="metric"><strong class="metric-value">338</strong><span class="metric-label" data-zh="道结构化工程面试题，沉淀为开源知识产品" data-hant="道結構化工程面試題，沉澱為開源知識產品" data-en="structured engineering interview questions published as an open knowledge product">道结构化工程面试题，沉淀为开源知识产品</span></div>
+        <div class="metric"><strong class="metric-value">2M+</strong><span class="metric-label" data-zh="金融实体知识库记录" data-hant="金融實體知識庫記錄" data-en="financial entity records">金融实体知识库记录</span></div>
+        <div class="metric"><strong class="metric-value">94.8%</strong><span class="metric-label" data-zh="AI 电话点餐 Agent 准确率" data-hant="AI 電話點餐 Agent 準確率" data-en="AI phone-ordering agent accuracy">AI 电话点餐 Agent 准确率</span></div>
+        <div class="metric"><strong class="metric-value">85.33%</strong><span class="metric-label" data-zh="金融实体知识库准确率（从 62% 提升）" data-hant="金融實體知識庫準確率（從 62% 提升）" data-en="financial entity knowledge-base accuracy, improved from 62%">金融实体知识库准确率（从 62% 提升）</span></div>
       </div>
     </section>
 
     <section class="section" id="work" aria-labelledby="work-title">
       <div class="shell">
         <div class="section-head reveal">
-          <p class="section-kicker">01 / Selected work</p>
-          <h2 class="section-title" id="work-title" data-zh="不只是写模型调用，而是把 AI 做成完整系统。" data-hant="不只是寫模型調用，而是把 AI 做成完整系統。" data-en="Beyond model calls: building AI into complete systems.">不只是写模型调用，而是把 AI 做成完整系统。</h2>
+          <p class="section-kicker">01 / Projects</p>
+          <h2 class="section-title" id="work-title" data-zh="项目与工作" data-hant="項目與工作" data-en="Projects and work">项目与工作</h2>
         </div>
         <div class="work-grid">
           <a class="project-card featured reveal" href="#experience">
             <div class="card-top"><span class="project-type" data-zh="生产系统 · 美团" data-hant="生產系統 · 美團" data-en="Production systems · Meituan">生产系统 · 美团</span><span class="arrow" aria-hidden="true">↗</span></div>
-            <h3 data-zh="从通话到订单的实时 AI Agent" data-hant="從通話到訂單的實時 AI Agent" data-en="A real-time AI agent from conversation to order">从通话到订单的实时 AI Agent</h3>
+            <h3 data-zh="AI 电话点餐 Agent" data-hant="AI 電話點餐 Agent" data-en="AI Phone-ordering Agent">AI 电话点餐 Agent</h3>
             <p data-zh="基于 Pipecat 与 OpenAI Realtime API 构建分层多智能体系统，用 Supervisor 划分任务边界；在真实门店场景中处理约 1,000 笔订单，并将平均通话时长从 5 分钟压缩至 2 分钟。" data-hant="基於 Pipecat 與 OpenAI Realtime API 構建分層多智能體系統，用 Supervisor 劃分任務邊界；在真實門店場景中處理約 1,000 筆訂單，並將平均通話時長從 5 分鐘壓縮至 2 分鐘。" data-en="Built a tiered multi-agent system with Pipecat and OpenAI Realtime API, using supervisors to keep responsibilities explicit. It handled about 1,000 real orders and reduced average call time from five minutes to two.">基于 Pipecat 与 OpenAI Realtime API 构建分层多智能体系统，用 Supervisor 划分任务边界；在真实门店场景中处理约 1,000 笔订单，并将平均通话时长从 5 分钟压缩至 2 分钟。</p>
             <div class="project-meta"><span>Realtime</span><span>Multi-agent</span><span>Evaluation</span></div><span class="project-number">01</span>
           </a>
 
-          <a class="project-card tall reveal" href="https://github.com/xyma2003/interview-bagu" target="_blank" rel="noopener noreferrer">
-            <div class="card-top"><span class="project-type" data-zh="开源知识产品" data-hant="開源知識產品" data-en="Open knowledge product">开源知识产品</span><span class="arrow" aria-hidden="true">↗</span></div>
-            <h3>Interview Bagu</h3>
-            <p data-zh="把 AI Agent、前端、后端与算法的面试知识整理成 338 道结构化题目，每道都给出原理、考察点和表达框架。" data-hant="把 AI Agent、前端、後端與算法的面試知識整理成 338 道結構化題目，每道都給出原理、考察點和表達框架。" data-en="A structured set of 338 questions across AI agents, frontend, backend, and algorithms, each with underlying concepts, evaluation points, and answer frameworks.">把 AI Agent、前端、后端与算法的面试知识整理成 338 道结构化题目，每道都给出原理、考察点和表达框架。</p>
-            <div class="project-meta"><span>338 Qs</span><span>Open source</span><span>7 stars</span></div><span class="project-number">02</span>
+          <a class="project-card tall reveal" href="https://github.com/xyma2003/kdd-cup" target="_blank" rel="noopener noreferrer">
+            <div class="card-top"><span class="project-type" data-zh="数据分析 Agent" data-hant="數據分析 Agent" data-en="Data analysis agent">数据分析 Agent</span><span class="arrow" aria-hidden="true">↗</span></div>
+            <h3>KDD Cup 2026 — DataAgent-Bench</h3>
+            <p data-zh="面向异构数据分析的 ReAct Agent，包含五层容错 JSON 解析和 SQL 结果自验证。" data-hant="面向異構數據分析的 ReAct Agent，包含五層容錯 JSON 解析和 SQL 結果自驗證。" data-en="A ReAct agent for heterogeneous data analysis with five-layer fault-tolerant JSON parsing and SQL result self-verification.">面向异构数据分析的 ReAct Agent，包含五层容错 JSON 解析和 SQL 结果自验证。</p>
+            <div class="project-meta"><span>ReAct</span><span>SQL</span><span>Self-verification</span></div><span class="project-number">02</span>
           </a>
 
           <a class="project-card half reveal" href="https://github.com/xyma2003/multi-agent-debate" target="_blank" rel="noopener noreferrer">
             <div class="card-top"><span class="project-type" data-zh="多智能体研究" data-hant="多智能體研究" data-en="Multi-agent research">多智能体研究</span><span class="arrow" aria-hidden="true">↗</span></div>
-            <h3 data-zh="可审计的多智能体辩论" data-hant="可審計的多智能體辯論" data-en="Auditable multi-agent debate">可审计的多智能体辩论</h3>
+            <h3>Multi-Agent Debate</h3>
             <p data-zh="用 LangGraph 设计反共识架构，加入立场检测、让步跟踪与结构化报告，让结论可追溯，而不是只看最后一句话。" data-hant="用 LangGraph 設計反共識架構，加入立場檢測、讓步追蹤與結構化報告，讓結論可追溯，而不是只看最後一句話。" data-en="An anti-consensus architecture in LangGraph with stance detection, concession tracking, and structured reports—making conclusions traceable instead of trusting only the final answer.">用 LangGraph 设计反共识架构，加入立场检测、让步跟踪与结构化报告，让结论可追溯，而不是只看最后一句话。</p>
             <div class="project-meta"><span>LangGraph</span><span>NLI</span><span>Structured output</span></div><span class="project-number">03</span>
           </a>
@@ -318,8 +317,8 @@
       <div class="shell experience-grid">
         <div class="experience-intro reveal">
           <p class="section-kicker">02 / Experience</p>
-          <h2 class="section-title" id="experience-title" data-zh="把原型推到生产，再用数据把它做稳。" data-hant="把原型推到生產，再用數據把它做穩。" data-en="Ship the prototype, then use evidence to make it reliable.">把原型推到生产，再用数据把它做稳。</h2>
-          <p data-zh="我的经历横跨前端产品交付、LLM 数据流程与实时 Agent。共同点是：问题没有完整答案，但系统最终要有清晰边界和可量化结果。" data-hant="我的經歷橫跨前端產品交付、LLM 數據流程與實時 Agent。共同點是：問題沒有完整答案，但系統最終要有清晰邊界和可量化結果。" data-en="My work spans frontend product delivery, LLM data pipelines, and real-time agents. The common thread: ambiguous problems that still need clear system boundaries and measurable outcomes.">我的经历横跨前端产品交付、LLM 数据流程与实时 Agent。共同点是：问题没有完整答案，但系统最终要有清晰边界和可量化结果。</p>
+          <h2 class="section-title" id="experience-title" data-zh="工作经历" data-hant="工作經歷" data-en="Experience">工作经历</h2>
+          <p data-zh="主要工作内容包括 AI Agent、LLM 数据处理、数据质量工具和前端开发。" data-hant="主要工作內容包括 AI Agent、LLM 數據處理、數據質量工具和前端開發。" data-en="My work includes AI agents, LLM data processing, data-quality tools, and frontend development.">主要工作内容包括 AI Agent、LLM 数据处理、数据质量工具和前端开发。</p>
         </div>
         <div class="timeline reveal">
           <article class="role">
@@ -343,20 +342,20 @@
 
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="shell">
-        <div class="section-head reveal"><p class="section-kicker">03 / How I work</p><h2 class="section-title" id="about-title" data-zh="我关心的是闭环，不是一次漂亮的 demo。" data-hant="我關心的是閉環，不是一次漂亮的 demo。" data-en="I care about the loop, not a one-off impressive demo.">我关心的是闭环，不是一次漂亮的 demo。</h2></div>
+        <div class="section-head reveal"><p class="section-kicker">03 / About</p><h2 class="section-title" id="about-title" data-zh="关于我" data-hant="關於我" data-en="About">关于我</h2></div>
         <div class="about-grid reveal">
-          <p class="manifesto" data-zh="好的 AI 产品需要同时理解模型的不确定性、工程的边界，以及人在什么时候应该介入。我喜欢做那个把三者连起来的人。" data-hant="好的 AI 產品需要同時理解模型的不確定性、工程的邊界，以及人在什麼時候應該介入。我喜歡做那個把三者連起來的人。" data-en="Good AI products require understanding model uncertainty, engineering boundaries, and when a human should step in. I like being the person who connects all three.">好的 AI 产品需要同时理解模型的不确定性、工程的边界，以及人在什么时候应该介入。我喜欢做那个把三者连起来的人。</p>
+          <p class="manifesto" data-zh="我主要使用 Python，也掌握Java、C++、JavaScript 和 SQL等语言。工作中做过实时语音 Agent、金融实体知识库和数据质量工具；业余会开发一些 AI 与开发者工具项目。" data-hant="我主要使用 Python，也掌握Java、C++、JavaScript 和 SQL等語言。工作中做過實時語音 Agent、金融實體知識庫和數據質量工具；業餘會開發一些 AI 與開發者工具項目。" data-en="I mainly work with Python and am also proficient in Java, C++, JavaScript, SQL, and other languages. At work, I have built real-time voice agents, a financial entity knowledge base, and data-quality tools. Outside work, I develop open-source AI and developer-tool projects.">我主要使用 Python，也掌握Java、C++、JavaScript 和 SQL等语言。工作中做过实时语音 Agent、金融实体知识库和数据质量工具；业余会开发一些 AI 与开发者工具项目。</p>
           <div class="principles">
-            <article class="principle"><span class="principle-index">01</span><div><h3 data-zh="先定义评估" data-hant="先定義評估" data-en="Define evaluation first">先定义评估</h3><p data-zh="没有 benchmark 的智能，只是感觉。" data-hant="沒有 benchmark 的智能，只是感覺。" data-en="Intelligence without a benchmark is just a feeling.">没有 benchmark 的智能，只是感觉。</p></div></article>
-            <article class="principle"><span class="principle-index">02</span><div><h3 data-zh="把边界画清楚" data-hant="把邊界畫清楚" data-en="Make boundaries explicit">把边界画清楚</h3><p data-zh="模型、工具、规则与人，每一层都应知道自己负责什么。" data-hant="模型、工具、規則與人，每一層都應知道自己負責什麼。" data-en="Models, tools, rules, and people should each know what they own.">模型、工具、规则与人，每一层都应知道自己负责什么。</p></div></article>
-            <article class="principle"><span class="principle-index">03</span><div><h3 data-zh="为反馈而交付" data-hant="為反饋而交付" data-en="Ship to learn">为反馈而交付</h3><p data-zh="真实使用会暴露在实验室里看不到的问题。" data-hant="真實使用會暴露在實驗室裡看不到的問題。" data-en="Real use reveals what the lab never will.">真实使用会暴露在实验室里看不到的问题。</p></div></article>
+            <article class="principle"><span class="principle-index">01</span><div><h3>AI Agent</h3><p data-zh="多智能体、实时语音和 HITL 工作流。" data-hant="多智能體、實時語音和 HITL 工作流。" data-en="Multi-agent, real-time voice, and HITL workflows.">多智能体、实时语音和 HITL 工作流。</p></div></article>
+            <article class="principle"><span class="principle-index">02</span><div><h3 data-zh="LLM 工程" data-hant="LLM 工程" data-en="LLM Engineering">LLM 工程</h3><p data-zh="检索、抽取、评估、模型蒸馏和幻觉检测。" data-hant="檢索、抽取、評估、模型蒸餾和幻覺檢測。" data-en="Retrieval, extraction, evaluation, distillation, and hallucination detection.">检索、抽取、评估、模型蒸馏和幻觉检测。</p></div></article>
+            <article class="principle"><span class="principle-index">03</span><div><h3 data-zh="开发者工具" data-hant="開發者工具" data-en="Developer Tools">开发者工具</h3><p data-zh="工作日报、代码库问答和其他自动化工具。" data-hant="工作日報、代碼庫問答和其他自動化工具。" data-en="Work reports, codebase Q&amp;A, and other automation tools.">工作日报、代码库问答和其他自动化工具。</p></div></article>
           </div>
         </div>
         <div class="capabilities reveal" aria-label="Capabilities">
           <div class="capability"><h3 data-zh="Agent 系统" data-hant="Agent 系統" data-en="Agent systems">Agent 系统</h3><p>LangGraph · ReAct<br>HITL · MCP<br>Multi-agent</p></div>
           <div class="capability"><h3 data-zh="LLM 质量" data-hant="LLM 質量" data-en="LLM quality">LLM 质量</h3><p>RAG · Evals<br>Distillation<br>Guardrails</p></div>
-          <div class="capability"><h3 data-zh="后端与数据" data-hant="後端與數據" data-en="Backend &amp; data">后端与数据</h3><p>Python · FastAPI<br>SQL · DuckDB<br>SQLite</p></div>
-          <div class="capability"><h3 data-zh="产品工程" data-hant="產品工程" data-en="Product engineering">产品工程</h3><p>TypeScript<br>Next.js<br>HTML · CSS</p></div>
+          <div class="capability"><h3 data-zh="编程语言" data-hant="編程語言" data-en="Programming languages">编程语言</h3><p>Python · Java<br>C++ · JavaScript<br>SQL</p></div>
+          <div class="capability"><h3 data-zh="后端与数据" data-hant="後端與數據" data-en="Backend &amp; data">后端与数据</h3><p>FastAPI · Next.js<br>DuckDB · SQLite<br>HTML · CSS</p></div>
         </div>
         <div class="education reveal">
           <article class="school"><span class="school-year">2021 — 2025</span><h3 data-zh="香港大学" data-hant="香港大學" data-en="The University of Hong Kong">香港大学</h3><p data-zh="文理学士，双主修计算机科学与金融科技。连续 4 年全额奖学金，院长荣誉榜。" data-hant="文理學士，雙主修計算機科學與金融科技。連續 4 年全額獎學金，院長榮譽榜。" data-en="BASc, double major in Computer Science and Financial Technology. Four-year full scholarship and Dean's Honor List.">文理学士，双主修计算机科学与金融科技。连续 4 年全额奖学金，院长荣誉榜。</p></article>
@@ -369,10 +368,10 @@
   <footer class="site-footer" id="contact">
     <div class="shell">
       <div class="footer-main">
-        <div><p class="footer-kicker">04 / Contact</p><h2 data-zh="聊聊一个值得做稳的 AI 问题。" data-hant="聊聊一個值得做穩的 AI 問題。" data-en="Let's talk about an AI problem worth making reliable.">聊聊一个值得做稳的 AI 问题。</h2></div>
+        <div><p class="footer-kicker">04 / Contact</p><h2 data-zh="联系我" data-hant="聯絡我" data-en="Contact">联系我</h2></div>
         <div class="footer-links"><a class="button" href="mailto:u3594619@connect.hku.hk">Email ↗</a><a class="button" href="https://github.com/xyma2003" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       </div>
-      <div class="footer-bottom"><span>© <span id="year">2026</span> Max Ma</span><span data-zh="为清晰、可靠与真实使用而构建。" data-hant="為清晰、可靠與真實使用而構建。" data-en="Built for clarity, reliability, and real use.">为清晰、可靠与真实使用而构建。</span></div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> Max Ma</span><span>xyma2003.github.io</span></div>
     </div>
   </footer>
 
@@ -380,11 +379,11 @@
     (() => {
       const languages = ['zh', 'hant', 'en'];
       const htmlLang = { zh: 'zh-CN', hant: 'zh-HK', en: 'en' };
-      const titles = { zh: 'Max Ma — AI 系统与产品工程师', hant: 'Max Ma — AI 系統與產品工程師', en: 'Max Ma — AI Systems & Product Engineering' };
+      const titles = { zh: 'Max Ma — 软件工程师', hant: 'Max Ma — 軟件工程師', en: 'Max Ma — Software Engineer' };
       const descriptions = {
-        zh: 'Max Ma — AI 系统与产品工程师，专注生产级 Agent、知识工程与开发者工具。',
-        hant: 'Max Ma — AI 系統與產品工程師，專注生產級 Agent、知識工程與開發者工具。',
-        en: 'Max Ma — AI systems and product engineer focused on production agents, knowledge engineering, and developer tools.'
+        zh: 'Max Ma 的个人网站。软件工程师，主要从事 AI Agent 与 LLM 应用开发。',
+        hant: 'Max Ma 的個人網站。軟件工程師，主要從事 AI Agent 與 LLM 應用開發。',
+        en: 'Personal website of Max Ma, a software engineer working on AI agents and LLM applications.'
       };
       let current = localStorage.getItem('site-lang');
       if (!languages.includes(current)) {
@@ -408,16 +407,6 @@
       const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 10);
       window.addEventListener('scroll', updateHeader, { passive: true });
       updateHeader();
-      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-          });
-        }, { threshold: 0.12 });
-        document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-      } else {
-        document.querySelectorAll('.reveal').forEach((element) => element.classList.add('visible'));
-      }
       document.getElementById('year').textContent = new Date().getFullYear();
       applyLanguage(current);
     })();

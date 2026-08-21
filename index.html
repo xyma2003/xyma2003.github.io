@@ -143,19 +143,8 @@
     .role li + li { margin-top: 10px; }
     .role li::before { content: ""; position: absolute; top: 0.72em; left: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
 
-    .about-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 76px; }
-    .manifesto { margin: 0; font-size: clamp(27px, 3.5vw, 42px); line-height: 1.28; letter-spacing: -0.03em; }
-    .principles { display: grid; gap: 0; }
-    .principle { display: grid; grid-template-columns: 46px 1fr; gap: 18px; padding: 22px 0; border-top: 1px solid var(--line); }
-    .principle:last-child { border-bottom: 1px solid var(--line); }
-    .principle-index { color: var(--muted); font-family: inherit; font-style: normal; font-weight: 650; }
-    .principle h3 { margin: 0 0 7px; font-size: 17px; }
-    .principle p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
-    .capabilities { margin-top: 76px; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-    .capability { min-height: 150px; padding: 24px; background: transparent; }
-    .capability + .capability { border-left: 1px solid var(--line); }
-    .capability h3 { margin: 0 0 26px; color: var(--muted); font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; }
-    .capability p { margin: 0; font-size: 14px; line-height: 1.8; font-weight: 650; }
+    .about-grid { display: block; }
+    .manifesto { margin: 0; max-width: 760px; font-size: clamp(22px, 2.4vw, 32px); line-height: 1.45; letter-spacing: -0.02em; }
     .education { margin-top: 76px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .school { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
     .school-year { color: var(--muted); font-size: 12px; font-weight: 700; }
@@ -184,9 +173,6 @@
       .section-head { gap: 18px; }
       .experience-intro { position: static; }
       .project-card.featured, .project-card.tall, .project-card.half { grid-column: span 12; }
-      .capabilities { grid-template-columns: 1fr 1fr; }
-      .capability:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
-      .capability:nth-child(4) { border-top: 1px solid var(--line); }
       .footer-links { justify-content: flex-start; }
     }
 
@@ -206,8 +192,7 @@
       .project-card, .project-card.featured, .project-card.tall { min-height: 0; padding: 24px; }
       .project-card h3 { margin-top: 48px; }
       .role { grid-template-columns: 1fr; gap: 12px; }
-      .capabilities, .education { grid-template-columns: 1fr; }
-      .capability + .capability { border-left: 0; border-top: 1px solid var(--line); }
+      .education { grid-template-columns: 1fr; }
       .education { margin-top: 52px; }
       .site-footer { padding-top: 76px; }
       .footer-bottom { margin-top: 58px; flex-direction: column; }
@@ -344,18 +329,7 @@
       <div class="shell">
         <div class="section-head reveal"><p class="section-kicker">03 / About</p><h2 class="section-title" id="about-title" data-zh="关于我" data-hant="關於我" data-en="About">关于我</h2></div>
         <div class="about-grid reveal">
-          <p class="manifesto" data-zh="我主要使用 Python，也掌握Java、C++、JavaScript 和 SQL等语言。工作中做过实时语音 Agent、金融实体知识库和数据质量工具；业余会开发一些 AI 与开发者工具项目。" data-hant="我主要使用 Python，也掌握Java、C++、JavaScript 和 SQL等語言。工作中做過實時語音 Agent、金融實體知識庫和數據質量工具；業餘會開發一些 AI 與開發者工具項目。" data-en="I mainly work with Python and am also proficient in Java, C++, JavaScript, SQL, and other languages. At work, I have built real-time voice agents, a financial entity knowledge base, and data-quality tools. Outside work, I develop open-source AI and developer-tool projects.">我主要使用 Python，也掌握Java、C++、JavaScript 和 SQL等语言。工作中做过实时语音 Agent、金融实体知识库和数据质量工具；业余会开发一些 AI 与开发者工具项目。</p>
-          <div class="principles">
-            <article class="principle"><span class="principle-index">01</span><div><h3>AI Agent</h3><p data-zh="多智能体、实时语音和 HITL 工作流。" data-hant="多智能體、實時語音和 HITL 工作流。" data-en="Multi-agent, real-time voice, and HITL workflows.">多智能体、实时语音和 HITL 工作流。</p></div></article>
-            <article class="principle"><span class="principle-index">02</span><div><h3 data-zh="LLM 工程" data-hant="LLM 工程" data-en="LLM Engineering">LLM 工程</h3><p data-zh="检索、抽取、评估、模型蒸馏和幻觉检测。" data-hant="檢索、抽取、評估、模型蒸餾和幻覺檢測。" data-en="Retrieval, extraction, evaluation, distillation, and hallucination detection.">检索、抽取、评估、模型蒸馏和幻觉检测。</p></div></article>
-            <article class="principle"><span class="principle-index">03</span><div><h3 data-zh="开发者工具" data-hant="開發者工具" data-en="Developer Tools">开发者工具</h3><p data-zh="工作日报、代码库问答和其他自动化工具。" data-hant="工作日報、代碼庫問答和其他自動化工具。" data-en="Work reports, codebase Q&amp;A, and other automation tools.">工作日报、代码库问答和其他自动化工具。</p></div></article>
-          </div>
-        </div>
-        <div class="capabilities reveal" aria-label="Capabilities">
-          <div class="capability"><h3 data-zh="Agent 系统" data-hant="Agent 系統" data-en="Agent systems">Agent 系统</h3><p>LangGraph · ReAct<br>HITL · MCP<br>Multi-agent</p></div>
-          <div class="capability"><h3 data-zh="LLM 质量" data-hant="LLM 質量" data-en="LLM quality">LLM 质量</h3><p>RAG · Evals<br>Distillation<br>Guardrails</p></div>
-          <div class="capability"><h3 data-zh="编程语言" data-hant="編程語言" data-en="Programming languages">编程语言</h3><p>Python · Java<br>C++ · JavaScript<br>SQL</p></div>
-          <div class="capability"><h3 data-zh="后端与数据" data-hant="後端與數據" data-en="Backend &amp; data">后端与数据</h3><p>FastAPI · Next.js<br>DuckDB · SQLite<br>HTML · CSS</p></div>
+          <p class="manifesto" data-zh="我是一名软件工程师，喜欢探索和构建 AI Agent。" data-hant="我是一名軟件工程師，喜歡探索和構建 AI Agent。" data-en="I'm a software engineer who enjoys exploring and building AI agents.">我是一名软件工程师，喜欢探索和构建 AI Agent。</p>
         </div>
         <div class="education reveal">
           <article class="school"><span class="school-year">2021 — 2025</span><h3 data-zh="香港大学" data-hant="香港大學" data-en="The University of Hong Kong">香港大学</h3><p data-zh="文理学士，双主修计算机科学与金融科技。连续 4 年全额奖学金，院长荣誉榜。" data-hant="文理學士，雙主修計算機科學與金融科技。連續 4 年全額獎學金，院長榮譽榜。" data-en="BASc, double major in Computer Science and Financial Technology. Four-year full scholarship and Dean's Honor List.">文理学士，双主修计算机科学与金融科技。连续 4 年全额奖学金，院长荣誉榜。</p></article>

@@ -117,6 +117,7 @@
     .project-card.featured { grid-column: span 6; min-height: 340px; color: var(--ink); background: var(--white); border-color: var(--line); }
     .project-card.tall { grid-column: span 6; min-height: 340px; background: var(--white); }
     .project-card.half { grid-column: span 6; }
+    .project-card.wide { grid-column: 1 / -1; min-height: 0; }
     .card-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: auto; }
     .project-type { font-size: 11px; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
     .project-card:not(.featured) .project-type { color: var(--muted); }
@@ -129,6 +130,8 @@
     .project-meta span { padding: 0; border: 0; border-radius: 0; color: var(--muted); font-size: 11px; font-weight: 650; opacity: 1; }
     .project-meta span + span::before { content: "·"; margin-right: 8px; }
     .project-number { display: none; }
+    .project-evidence { margin: 18px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .project-evidence a { text-underline-offset: 3px; }
 
     .experience-grid { display: grid; grid-template-columns: 0.8fr 1.6fr; gap: 80px; }
     .experience-intro { position: sticky; top: 112px; align-self: start; }
@@ -289,12 +292,34 @@
           </article>
 
           <a class="project-card half reveal" href="https://github.com/xyma2003/multi-agent-debate" target="_blank" rel="noopener noreferrer">
-            <div class="card-top"><span class="project-type" data-zh="多智能体研究" data-hant="多智能體研究" data-en="Multi-agent research">多智能体研究</span><span class="arrow" aria-hidden="true">↗</span></div>
+            <div class="card-top"><span class="project-type" data-zh="多智能体探索" data-hant="多智能體探索" data-en="Multi-agent exploration">多智能体探索</span><span class="arrow" aria-hidden="true">↗</span></div>
             <h3>Multi-Agent Debate</h3>
-            <p data-zh="基于 LangGraph 编排并行分析与多轮反驳，结合 NLI 矛盾检测和自适应辩论策略；构建 40 题评测比较固定与自适应策略。" data-hant="基於 LangGraph 編排並行分析與多輪反駁，結合 NLI 矛盾檢測和自適應辯論策略；構建 40 題評測比較固定與自適應策略。" data-en="Uses LangGraph for parallel analysis and multi-round rebuttal, with NLI contradiction detection and adaptive debate strategies evaluated on a 40-question benchmark.">基于 LangGraph 编排并行分析与多轮反驳，结合 NLI 矛盾检测和自适应辩论策略；构建 40 题评测比较固定与自适应策略。</p>
+            <p data-zh="让三个不同视角的 AI 独立分析、相互质疑，保留分歧、让步与最终报告。支持离线样例、历史回放和导出；实验仅作小样本探索性比较。" data-hant="讓三個不同視角的 AI 獨立分析、相互質疑，保留分歧、讓步與最終報告。支援離線範例、歷史回放和匯出；實驗僅作小樣本探索性比較。" data-en="Three AI perspectives challenge one another and preserve disagreements, concessions, and an exportable report. Includes an offline example and history replay; experiments are small-sample exploratory comparisons.">让三个不同视角的 AI 独立分析、相互质疑，保留分歧、让步与最终报告。支持离线样例、历史回放和导出；实验仅作小样本探索性比较。</p>
             <div class="project-meta"><span>LangGraph</span><span>NLI</span><span>Evaluation</span></div><span class="project-number">04</span>
           </a>
+
+          <a class="project-card half reveal" href="https://github.com/xyma2003/workdiary-agent" target="_blank" rel="noopener noreferrer">
+            <div class="card-top"><span class="project-type" data-zh="工作流工具" data-hant="工作流工具" data-en="Report workflow">工作流工具</span><span class="arrow" aria-hidden="true">↗</span></div>
+            <h3>WorkDiary Agent</h3>
+            <p data-zh="把零散工作记录整理成日报，对照原始材料审核、修改并确认保存；支持中断恢复、历史管理和 Markdown 导出。" data-hant="把零散工作記錄整理成日報，對照原始材料審核、修改並確認保存；支援中斷恢復、歷史管理和 Markdown 匯出。" data-en="Turn rough notes into daily reports you can review against the original sources, edit, and approve. Resume interrupted runs, manage saved reports, and export Markdown.">把零散工作记录整理成日报，对照原始材料审核、修改并确认保存；支持中断恢复、历史管理和 Markdown 导出。</p>
+            <div class="project-meta"><span>LangGraph</span><span>Review</span><span>Recovery</span></div><span class="project-number">05</span>
+          </a>
+
+          <a class="project-card half reveal" href="https://github.com/xyma2003/critter" target="_blank" rel="noopener noreferrer">
+            <div class="card-top"><span class="project-type" data-zh="桌面伙伴" data-hant="桌面夥伴" data-en="Desktop companion">桌面伙伴</span><span class="arrow" aria-hidden="true">↗</span></div>
+            <h3>Critter</h3>
+            <p data-zh="一只住在 macOS 桌面的边牧，支持连续聊天、宠物互动、便签和宠物视角日记。基础动画随仓库提供，AI 功能按需配置。" data-hant="一隻住在 macOS 桌面的邊牧，支援連續聊天、寵物互動、便箋和寵物視角日記。基礎動畫隨倉庫提供，AI 功能按需配置。" data-en="A macOS desktop border collie for ongoing chats, pet interactions, notes, and diaries from its point of view. Animations are included; AI is optional.">一只住在 macOS 桌面的边牧，支持连续聊天、宠物互动、便签和宠物视角日记。基础动画随仓库提供，AI 功能按需配置。</p>
+            <div class="project-meta"><span>macOS</span><span>PyQt6</span><span>Local storage</span></div><span class="project-number">06</span>
+          </a>
+
+          <a class="project-card half wide reveal" href="https://github.com/xyma2003/interview-bagu" target="_blank" rel="noopener noreferrer">
+            <div class="card-top"><span class="project-type" data-zh="学习资料" data-hant="學習資料" data-en="Learning resource">学习资料</span><span class="arrow" aria-hidden="true">↗</span></div>
+            <h3 data-zh="面试八股题库" data-hant="面試八股題庫" data-en="Interview Study Notes">面试八股题库</h3>
+            <p data-zh="按主题整理前端、后端、AI Agent 与算法练习，提供题目解析、学习路线和部分代码示例验证。来源核验与自动测试范围单独标注。" data-hant="按主題整理前端、後端、AI Agent 與演算法練習，提供題目解析、學習路線和部分程式碼範例驗證。來源核驗與自動測試範圍單獨標註。" data-en="Study frontend, backend, AI agents, and algorithms through topic guides, explanations, and selected executable examples. Source review and automated-test coverage are documented separately.">按主题整理前端、后端、AI Agent 与算法练习，提供题目解析、学习路线和部分代码示例验证。来源核验与自动测试范围单独标注。</p>
+            <div class="project-meta"><span>Topic guides</span><span>Examples</span><span>Source review</span></div><span class="project-number">07</span>
+          </a>
         </div>
+        <p class="project-evidence">Multi-Agent Debate · <a href="https://github.com/xyma2003/multi-agent-debate/blob/main/results/README.md" target="_blank" rel="noopener noreferrer" data-zh="实验数据与适用范围 ↗" data-hant="實驗數據與適用範圍 ↗" data-en="Experiment data and scope ↗">实验数据与适用范围 ↗</a></p>
       </div>
     </section>
 

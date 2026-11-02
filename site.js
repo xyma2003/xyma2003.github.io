@@ -5,9 +5,9 @@
   const htmlLang = { zh: 'zh-CN', hant: 'zh-HK', en: 'en' };
   const titles = { zh: 'Max Ma · 个人主页', hant: 'Max Ma · 個人主頁', en: 'Max Ma · Personal website' };
   const descriptions = {
-    zh: 'Max 的个人主页，记录自己的项目、游戏、美食和学习笔记。',
-    hant: 'Max 的個人主頁，記錄自己的專案、遊戲、美食和學習筆記。',
-    en: 'Max’s personal website: projects, games, food notes, and study notes.'
+    zh: 'Max 的个人主页，记录自己的项目、游戏和学习笔记。',
+    hant: 'Max 的個人主頁，記錄自己的專案、遊戲和學習筆記。',
+    en: 'Max’s personal website: projects, games, and study notes.'
   };
   let saved;
   try { saved = localStorage.getItem('site-lang'); } catch (_) { /* Reading remains available without storage. */ }

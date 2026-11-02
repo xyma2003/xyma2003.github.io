@@ -41,20 +41,18 @@ img { display:block; max-width:100%; }
 .section-heading { display:grid; grid-template-columns:1fr 2fr; gap:35px; margin-bottom:48px; align-items:start; }
 .section-index,.project-label { font:500 24px/1.5 var(--font); color:var(--ink); margin:0; letter-spacing:0; }
 .section-description { color:var(--muted); font-size:14px; margin:0; }
-.project { display:grid; grid-template-columns:1.28fr 1fr; gap:54px; align-items:center; padding:0 0 54px; margin:0 0 54px; border-bottom:1px solid var(--line); }
+.project { display:grid; grid-template-columns:minmax(0,1fr); gap:24px; max-width:900px; padding:0 0 54px; margin:0 0 54px; border-bottom:1px solid var(--line); }
 .project:last-of-type { margin-bottom:0; }
-.project.reverse { grid-template-columns:1fr 1.28fr; }
-.project.reverse .project-media { order:2; }
-.project.reverse .project-copy { order:1; }
 .project-media { margin:0; min-width:0; }
+.project-copy { max-width:760px; min-width:0; }
 .screen-mat { padding:24px; background:#dfe9d9; border-radius:12px; display:block; position:relative; text-decoration:none; }
 .screen-mat:hover { background:#d6e3ce; }
-.screen-mat img { width:100%; height:310px; object-fit:contain; filter:drop-shadow(0 4px 9px #20322814); }
+.screen-mat img { width:100%; height:auto; max-height:440px; object-fit:contain; filter:drop-shadow(0 4px 9px #20322814); }
 .project-debate .screen-mat { background:#e5e9f1; }
 .project-workdiary .screen-mat { background:#ede4d9; }
 .image-hint { display:block; text-align:right; margin-top:12px; font-size:11px; color:#52604d; }
 figcaption { margin-top:10px; font-size:11px; color:var(--muted); line-height:1.65; }
-.project-label { display:flex; align-items:baseline; gap:12px; margin-bottom:18px; }
+.project-label { display:flex; align-items:baseline; gap:12px; }
 .project-label .num { flex-shrink:0; font-variant-numeric:tabular-nums; }
 .project-description { font-size:14px; color:#566259; line-height:1.9; margin:0 0 20px; }
 .project-thought { border-left:2px solid #a8bd93; padding-left:15px; font-size:13px; line-height:1.8; color:#4a5f4d; margin:0 0 22px; }
@@ -103,9 +101,7 @@ figcaption { margin-top:10px; font-size:11px; color:var(--muted); line-height:1.
 html.has-js .js-only { display:flex; }
 @media (max-width:1000px) {
   .shell { width:calc(100% - 56px); }
-  .project { gap:32px; }
   .screen-mat { padding:16px; }
-  .screen-mat img { height:270px; }
   .nav { gap:22px; }
   .nav-links { gap:22px; }
   .section-heading,.about,.contact-section { grid-template-columns:1fr 2fr; gap:24px; }
@@ -129,11 +125,9 @@ html.has-js .js-only { display:flex; }
   .section-heading,.about,.contact-section { grid-template-columns:1fr; gap:12px; }
   .section-heading { margin-bottom:30px; }
   .section-index,.project-label { font-size:20px; }
-  .project,.project.reverse { grid-template-columns:1fr; gap:25px; margin-bottom:36px; padding-bottom:36px; }
-  .project.reverse .project-media,.project.reverse .project-copy { order:unset; }
+  .project { gap:18px; margin-bottom:36px; padding-bottom:36px; }
   .screen-mat { padding:18px; }
   .screen-mat img { height:auto; max-height:340px; }
-  .project-label { margin-bottom:12px; }
   .project-thought,.project-description { margin-bottom:16px; }
   .project-tag { margin-top:14px; }
   .side-link { grid-template-columns:36px 1fr 20px; gap:13px; padding:20px 0; }

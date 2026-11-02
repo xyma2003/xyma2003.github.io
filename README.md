@@ -1,6 +1,6 @@
 # Max Ma — Personal website
 
-A personal homepage for my projects, small experiments, and everyday interests. An introduction about games, music, and everyday life comes before the projects. Three project stories pair screenshots with descriptions and links; a separate section points to my game, Hong Kong food notes, and study notes. Contact links and a collapsed professional background section stay at the bottom.
+A personal homepage for my projects, small experiments, and everyday interests. An introduction about games, music, and everyday life comes before the projects. Three project stories pair screenshots with descriptions and links; a separate section points to my game and study notes. Contact links and a collapsed professional background section stay at the bottom.
 
 **Website:** [xyma2003.github.io](https://xyma2003.github.io/). GitHub Pages publishes the site from the root of the `main` branch.
 
@@ -29,7 +29,7 @@ Typography prefers the device's installed **YouYuan (幼圆)** font. No YouYuan 
 ## Featured work and interests
 
 - Project stories: [Critter](https://github.com/xyma2003/critter), [Multi-Agent Debate](https://github.com/xyma2003/multi-agent-debate), and [WorkDiary](https://github.com/xyma2003/workdiary-agent).
-- Personal links: [Laugh Runner](https://github.com/xyma2003/laugh-runner-prototype), [Hong Kong food notes](https://github.com/xyma2003/hk_meal), and [study notes](https://github.com/xyma2003/interview-bagu).
+- Personal links: [Laugh Runner](https://github.com/xyma2003/laugh-runner-prototype) and [study notes](https://github.com/xyma2003/interview-bagu).
 
 The project screenshots use synthetic or offline demonstration content. Their sources, licenses, and demonstration boundaries are documented in [assets/README.md](assets/README.md).
 

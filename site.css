@@ -16,8 +16,7 @@ img { display:block; max-width:100%; }
 .skip-link:focus { transform:translateY(0); }
 .header { position:sticky; top:0; z-index:20; background:rgba(246,243,235,.96); border-bottom:1px solid var(--line); }
 .nav { display:flex; align-items:center; min-height:82px; gap:32px; }
-.wordmark { display:inline-flex; align-items:center; gap:9px; text-decoration:none; font-size:25px; font-weight:600; letter-spacing:-.04em; }
-.wordmark-mark { color:var(--green); font-size:31px; line-height:1; }
+.wordmark { display:inline-flex; align-items:center; text-decoration:none; font-size:25px; font-weight:600; letter-spacing:-.04em; }
 .nav-links { margin-left:auto; display:flex; gap:28px; }
 .nav-links a { font-size:14px; text-decoration:none; }
 .nav-links a:hover { color:var(--green); }

@@ -1,6 +1,6 @@
 # Max Ma — Personal website
 
-A personal homepage for my projects, small experiments, and everyday interests. Three project stories pair screenshots with descriptions and links; a separate section points to my game, Hong Kong food notes, and study notes. Professional experience stays in a collapsed section at the bottom.
+A personal homepage for my projects, small experiments, and everyday interests. An introduction about games, music, and everyday life comes before the projects. Three project stories pair screenshots with descriptions and links; a separate section points to my game, Hong Kong food notes, and study notes. Contact links and a collapsed professional background section stay at the bottom.
 
 **Website:** [xyma2003.github.io](https://xyma2003.github.io/). GitHub Pages publishes the site from the root of the `main` branch.
 
@@ -23,6 +23,8 @@ Open [http://127.0.0.1:8000](http://127.0.0.1:8000). Press `Ctrl+C` to stop the 
 - Three language versions: 简体中文 / 繁體中文 / English.
 
 The site uses plain HTML, CSS, and JavaScript with no build dependencies. To publish an update, check the local preview, push to `main`, and confirm that the GitHub Pages deployment succeeds.
+
+Typography prefers the device's installed **YouYuan (幼圆)** font. No YouYuan font file is currently bundled; devices without it use the sans-serif fallback. The current Mac preview does not have YouYuan installed, so its appearance still needs verification with the actual font before this change is considered visually accepted.
 
 ## Featured work and interests
 

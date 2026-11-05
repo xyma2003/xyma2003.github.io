@@ -1,6 +1,6 @@
 # Max Ma — Personal website
 
-A personal homepage for my projects, small experiments, and everyday interests. An introduction about games, music, and everyday life comes before the projects. Three project stories pair screenshots with descriptions and links; a separate section points to my game and study notes. Contact links and a collapsed professional background section stay at the bottom.
+A personal homepage for my projects, small experiments, and everyday interests. An introduction about games, music, and everyday life comes before the projects. Three project stories pair screenshots with descriptions and links; a separate section points to my game and study notes. A collapsed experience section follows, with contact links in a separate section at the bottom.
 
 **Website:** [xyma2003.github.io](https://xyma2003.github.io/). GitHub Pages publishes the site from the root of the `main` branch.
 

@@ -1,6 +1,6 @@
 # Max Ma — Personal website
 
-A personal homepage for my projects, small experiments, and everyday interests. An introduction about games, music, and everyday life comes before the projects. Three project stories pair screenshots with descriptions and links; a separate section points to my game and study notes. A collapsed experience section follows, with contact links in a separate section at the bottom.
+A personal homepage for my projects, small experiments, and everyday interests. The About section introduces my everyday interests, followed by expandable education, work and other experience, and games. Three project stories pair screenshots with descriptions and links; a separate section points to my game and study notes. Contact links have their own section at the bottom.
 
 **Website:** [xyma2003.github.io](https://xyma2003.github.io/). GitHub Pages publishes the site from the root of the `main` branch.
 
@@ -16,7 +16,7 @@ Open [http://127.0.0.1:8000](http://127.0.0.1:8000). Press `Ctrl+C` to stop the 
 
 ## Contents
 
-- `index.html` — introduction, project stories, personal links, and an optional background section.
+- `index.html` — personal introduction and games, expandable background within About, project stories, and contact links.
 - `site.css` — responsive layout and visual styles.
 - `site.js` — language switching and page interactions.
 - `assets/` — three project screenshots copied from my project repositories. See [asset sources, demo boundaries, and licenses](assets/README.md).

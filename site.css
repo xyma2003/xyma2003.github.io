@@ -68,13 +68,17 @@ figcaption { margin-top:10px; font-size:11px; color:var(--muted); line-height:1.
 .side-tag { display:block; font-size:10px; text-transform:uppercase; color:var(--muted); font-weight:400; letter-spacing:.07em; margin-top:5px; }
 .side-description { font-size:13px; color:#53624e; }
 .side-arrow { font-size:20px; color:var(--green); }
-.about,.experience-section,.contact-section { display:grid; grid-template-columns:1fr 2fr; gap:35px; }
+.about,.contact-section { display:grid; grid-template-columns:1fr 2fr; gap:35px; }
 .about { border-bottom:1px solid var(--line); }
 .about-copy { max-width:690px; }
 .about-copy>p { font-size:16px; line-height:1.95; color:#526155; margin:0 0 20px; }
+.games-list { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:0; }
+.games-list dt { font-size:16px; }
+.games-list dd { font-size:14px; line-height:1.85; color:var(--muted); margin:8px 0 0; }
 .about-links { display:flex; gap:24px; flex-wrap:wrap; margin:26px 0 30px; }
 .background { border-block:1px solid var(--line); margin:0; }
-.background summary { cursor:pointer; padding:18px 0; font-size:13px; list-style:none; display:flex; justify-content:space-between; gap:20px; }
+.background+.background { border-top:0; }
+.background summary { cursor:pointer; padding:18px 0; font-size:15px; font-weight:500; list-style:none; display:flex; justify-content:space-between; gap:20px; }
 .background summary::-webkit-details-marker { display:none; }
 .background summary::after { content:"+"; font-size:22px; line-height:1; }
 .background[open] summary::after { content:"−"; }
@@ -102,7 +106,7 @@ html.has-js .js-only { display:flex; }
   .screen-mat { padding:16px; }
   .nav { gap:22px; }
   .nav-links { gap:22px; }
-  .section-heading,.about,.experience-section,.contact-section { grid-template-columns:1fr 2fr; gap:24px; }
+  .section-heading,.about,.contact-section { grid-template-columns:1fr 2fr; gap:24px; }
 }
 @media (max-width:760px) {
   html { scroll-padding-top:125px; }
@@ -120,7 +124,7 @@ html.has-js .js-only { display:flex; }
   .hero-note { font-size:10px; letter-spacing:.04em; }
   .hero-note>span:last-child { display:none; }
   .section { padding:56px 0; }
-  .section-heading,.about,.experience-section,.contact-section { grid-template-columns:1fr; gap:12px; }
+  .section-heading,.about,.contact-section { grid-template-columns:1fr; gap:12px; }
   .section-heading { margin-bottom:30px; }
   .section-index,.project-label { font-size:20px; }
   .project { gap:18px; margin-bottom:36px; padding-bottom:36px; }
@@ -133,8 +137,9 @@ html.has-js .js-only { display:flex; }
   .side-arrow { grid-column:3; grid-row:1; }
   .side-title { font-size:17px; }
   .side-icon { font-size:24px; }
-  .about,.experience-section,.contact-section { gap:18px; }
+  .about,.contact-section { gap:18px; }
   .about-copy>p { font-size:15px; }
+  .games-list { grid-template-columns:1fr; gap:20px; }
   .education { grid-template-columns:1fr; gap:12px; }
   .footer-inner { flex-wrap:wrap; gap:12px; }
   .footer-note { order:3; width:100%; }
